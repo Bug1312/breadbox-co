@@ -1,4 +1,4 @@
-# Format
+# Item Format in ./public/data/items.json
 
 ## Value | Data type | Required/Optional | Default value (if !null)
 Description of how `value` and `key` are used.
