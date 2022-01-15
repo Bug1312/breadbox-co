@@ -1,0 +1,8 @@
+[{
+    "name": "Item One",
+    "imageURL": "https://breadbox-co.glitch.me/images/16/iron_ingot.png",
+    "pixelized": true,
+    "costFCS": 0,
+    "costDiamonds": 1,
+    "defaultAmount": 1
+}]
