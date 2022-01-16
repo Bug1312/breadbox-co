@@ -22,6 +22,44 @@
     <imported type="header"></imported>
     <main>
         <h1>Checkout</h1>
+        <div class="box cart">
+            <generated type="cart"></generated>
+        </div>
+        <div class="box">
+            <form id="form" autocomplete="on" onsubmit="sendOrder(event)">
+                <div class="form-box">
+                    <div>
+                        <label class="label-above label-gray">Minecraft Username</label>
+                        <input id="mcUsername" class="bar" type="minecraft-username" placeholder="MinecraftGamer" pattern="\S\S\S+" required="">
+                    </div>
+                    <div>
+                        <label class="label-above label-gray">Discord Username & Tag</label>
+                        <input id="discordUsername" class="bar" type="discord-username" placeholder="MrBean#1234" pattern="\S+#\d\d\d\d" required="">
+                    </div>
+
+                </div>
+                <div class="form-box">
+                    <label class="label-above label-gray">Make this a gift?</label>
+                    <div class="bar">
+                        <div class="left">
+                            <input id="gift" class="left" type="checkbox" onchange="giftToggleUpdate()">
+                        </div>
+                        <input id="giftee" class="stretch right" type="gift-minecraft-username" placeholder="Minecraft Username" disabled="" required="">
+                    </div>
+                </div>
+                <div class="form-box">
+                    <label class="label-above label-gray">Currency used</label>
+                    <select id="currencyOption" class="bar" onload="updateDelivery(this.selectedOptions[0])" onchange="updateDelivery(this.selectedOptions[0])">
+                        <option value="FCS">FlexCrop Standard</option>
+                        <option value="diamonds">Diamonds</option>
+                    </select>
+                </div>
+                <div class="buttons">
+                    <a href="/">Return to shop</a>
+                    <button class="continue" type="submit">Purchase!</button>
+                </div>
+            </form>
+        </div>
     </main>
 </body>
 

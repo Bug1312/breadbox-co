@@ -43,6 +43,7 @@ require('dotenv').config();
         let keys = Object.keys(request.body);
         if (keys.filter(key => key.includes('item_')).length && keys.filter(key => key.includes('form')).length)
             bot.channels.cache.get(botData.channels.orders).send(createOrderMessage(request.body));
+        response.sendStatus(200);
     });
 }
 
@@ -51,28 +52,34 @@ require('dotenv').config();
     // Site 
     {
         function createOrderMessage(order) {
-            let form = JSON.parse(order.form),
-                data = {
-                    ign: form.ign,
-                    discord: form.discord,
-                    total: 0,
-                    items: [],
-                    giftBoolean: form.giftBoolean,
-                    giftee: form.giftee,
-                    currency: form.currency
-                };
+            order.form = JSON.parse(order.form);
+            let data = {
+                ign: order.form.ign,
+                discord: order.form.discord,
+                total: 0,
+                items: [],
+                giftBoolean: order.form.giftBoolean,
+                giftee: order.form.giftee,
+                currency: order.form.currency
+            };
 
-            Object.keys(order).filter(key => key.includes('item_')).forEach(item => {
-                let orderItem = JSON.parse(order[item]);
-                data.total += orderItem.amount;
+            Object.keys(order).filter(key => key.includes('item_')).forEach(fullKey => {
+                let itemID = fullKey.replace(/^item_/, ""),
+                    amount = order[fullKey],
+                    item = itemData.find(i => i.name == itemID),
+                    defaultAmount = item.default_amount == undefined ? 1 : item.default_amount;
+
+                if (data.currency == "FCS") data.total += Math.ceil((item.cost.FCS / defaultAmount) * amount);
+                else data.total += Math.ceil((item.cost.diamonds / defaultAmount) * amount);
 
                 data.items.push(
                     formatMessage('item', {
-                        itemID: orderItem.item,
-                        amount: orderItem.amount
+                        itemID,
+                        amount
                     })
                 );
             });
+
             return formatMessage('order', data);
         };
     }

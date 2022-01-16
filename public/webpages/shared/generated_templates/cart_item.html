@@ -1,7 +1,13 @@
-<li class="item">
-    <img class="item-image" src="%(imageURL)" alt="%(name)" pixelized="%(pixelized)">
-    <div class="item-costs">
-        <a href="https://flexcrop.net/economy">$%(cost.FCS)FCS</a>
-        <p>%(cost.diamonds) <img class="diamond_icon" src="/images/diamond.png" pixelized="true"></p>
-    </div>
-</li>
+<tr class="item">
+    <td class="cart-amount">%(amount)</td>
+    <td class="cart-item">
+        <p>%(name)</p> <img class="item-image" src="%(imageURL)" alt="%(name)" pixelized="%(pixelized)">
+    </td>
+    <td class="cart-costs">
+        <a href="https://flexcrop.net/economy" title="What is FCS?">$%(calculated.FCS)FCS</a>
+        <span class="cart-diamonds_container">
+            <p>%(calculated.diamonds)</p>
+            <img class="diamond_icon" src="/images/diamond.png" pixelized="true">
+        </span>
+    </td>
+</tr>
