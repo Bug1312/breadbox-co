@@ -19,11 +19,11 @@ function updateItemCalcs(parent) {
         elFCS = parent.querySelector(".cart_popup-cost_fcs"),
         elDiamonds = parent.querySelector(".cart_popup-cost_diamonds");
     let amount = Math.ceil(elAmount.value),
-        calcFCS = Math.ceil(eval(elFCS.getAttribute("calc"))),
-        calcDiamonds = Math.ceil(eval(elDiamonds.getAttribute("calc")));
+        calcFCS = eval(elFCS.getAttribute("calc")),
+        calcDiamonds = eval(elDiamonds.getAttribute("calc"));
 
-    elFCS.innerHTML = calcFCS * amount;
-    elDiamonds.innerHTML = calcDiamonds * amount;
+    elFCS.innerHTML = Math.ceil(calcFCS * amount);
+    elDiamonds.innerHTML = Math.ceil(calcDiamonds * amount);
 }
 
 function addToCart(elItem = document.body, negative = false) {
