@@ -1,8 +1,153 @@
 [{
-    "name": "Item One",
-    "imageURL": "https://breadbox-co.glitch.me/images/16/iron_ingot.png",
-    "pixelized": true,
-    "costFCS": 0,
-    "costDiamonds": 1,
-    "defaultAmount": 1
+    "name": "Item",
+    "desc": "Description",
+    "imageURL": "https://flexcrop.net/data/images/items/16x/fez.png",
+    "cost": {
+        "FCS": 50,
+        "diamonds": 1
+    },
+    "default_amount": 20,
+    "css": {
+        "right": {
+            "background": "white",
+            "text": "#000"
+        },
+        "left": {
+            "background": "red",
+            "text": "blue"
+        }
+    }
+}, {
+    "name": "Item",
+    "imageURL": "https://flexcrop.net/data/images/items/16x/fez.png",
+    "cost": {
+        "FCS": 50,
+        "diamonds": 1
+    }
+}, {
+    "name": "Item",
+    "imageURL": "https://flexcrop.net/data/images/items/16x/fez.png",
+    "cost": {
+        "FCS": 50,
+        "diamonds": 1
+    }
+}, {
+    "name": "Item",
+    "imageURL": "https://flexcrop.net/data/images/items/16x/fez.png",
+    "cost": {
+        "FCS": 50,
+        "diamonds": 1
+    }
+}, {
+    "name": "Item",
+    "imageURL": "https://flexcrop.net/data/images/items/16x/fez.png",
+    "cost": {
+        "FCS": 50,
+        "diamonds": 1
+    }
+}, {
+    "name": "Item",
+    "imageURL": "https://flexcrop.net/data/images/items/16x/fez.png",
+    "cost": {
+        "FCS": 50,
+        "diamonds": 1
+    }
+}, {
+    "name": "Item",
+    "imageURL": "https://flexcrop.net/data/images/items/16x/fez.png",
+    "cost": {
+        "FCS": 50,
+        "diamonds": 1
+    }
+}, {
+    "name": "Item",
+    "imageURL": "https://flexcrop.net/data/images/items/16x/fez.png",
+    "cost": {
+        "FCS": 50,
+        "diamonds": 1
+    }
+}, {
+    "name": "Item",
+    "imageURL": "https://flexcrop.net/data/images/items/16x/fez.png",
+    "cost": {
+        "FCS": 50,
+        "diamonds": 1
+    }
+}, {
+    "name": "Item",
+    "imageURL": "https://flexcrop.net/data/images/items/16x/fez.png",
+    "cost": {
+        "FCS": 50,
+        "diamonds": 1
+    }
+}, {
+    "name": "Item",
+    "imageURL": "https://flexcrop.net/data/images/items/16x/fez.png",
+    "cost": {
+        "FCS": 50,
+        "diamonds": 1
+    }
+}, {
+    "name": "Item",
+    "imageURL": "https://flexcrop.net/data/images/items/16x/fez.png",
+    "cost": {
+        "FCS": 50,
+        "diamonds": 1
+    }
+}, {
+    "name": "Item",
+    "imageURL": "https://flexcrop.net/data/images/items/16x/fez.png",
+    "cost": {
+        "FCS": 50,
+        "diamonds": 1
+    }
+}, {
+    "name": "Item",
+    "imageURL": "https://flexcrop.net/data/images/items/16x/fez.png",
+    "cost": {
+        "FCS": 50,
+        "diamonds": 1
+    }
+}, {
+    "name": "Item",
+    "imageURL": "https://flexcrop.net/data/images/items/16x/fez.png",
+    "cost": {
+        "FCS": 50,
+        "diamonds": 1
+    }
+}, {
+    "name": "Item",
+    "imageURL": "https://flexcrop.net/data/images/items/16x/fez.png",
+    "cost": {
+        "FCS": 50,
+        "diamonds": 1
+    }
+}, {
+    "name": "Item",
+    "imageURL": "https://flexcrop.net/data/images/items/16x/fez.png",
+    "cost": {
+        "FCS": 50,
+        "diamonds": 1
+    }
+}, {
+    "name": "Item",
+    "imageURL": "https://flexcrop.net/data/images/items/16x/fez.png",
+    "cost": {
+        "FCS": 50,
+        "diamonds": 1
+    }
+}, {
+    "name": "Item",
+    "imageURL": "https://flexcrop.net/data/images/items/16x/fez.png",
+    "cost": {
+        "FCS": 50,
+        "diamonds": 1
+    }
+}, {
+    "name": "Item",
+    "imageURL": "https://flexcrop.net/data/images/items/16x/fez.png",
+    "cost": {
+        "FCS": 50,
+        "diamonds": 1
+    }
 }]

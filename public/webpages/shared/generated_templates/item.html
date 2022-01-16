@@ -1,0 +1,28 @@
+<div class="item" name="%(name)">
+    <section class="item_section-left" style="color:%(css.left.text); background-color:%(css.left.background);">
+        <div class="item-costs">
+            <a href="https://flexcrop.net/economy" title="What is FCS?">$%(cost.FCS)FCS</a>
+            <p>%(cost.diamonds) <img class="diamond_icon" src="/images/diamond.png" pixelized="true"></p>
+        </div>
+        <img class="item-image" src="%(imageURL)" alt="%(name)" pixelized="%(pixelized)">
+    </section>
+    <section class="item_section-right" style="color:%(css.right.text); background-color:%(css.right.background); border-right-color:%(css.right.background);">
+        <p>%(name)</p>
+        <p>%(desc)</p>
+        <a class="item-add_cart" tabindex="0" onclick="showPopup(this);updateItemCalcs(this.querySelector('.cart_popup'))"> <i class="bi bi-basket2-fill"></i>
+            <div class="cart_popup" closed>
+                <input type="number" class="cart_popup-amount" min="1" step="1" onchange="updateItemCalcs(this.parentElement)" value="%(default_amount)" />
+                <p type="number" class="cart_popup-costs cart_popup-cost_fcs" calc="%(cost.FCS)/%(default_amount)"></p>
+                <span class="cart_popup-diamonds_container">
+                    <p type="number" class="cart_popup-costs cart_popup-cost_diamonds" calc="%(cost.diamonds)/%(default_amount)"></p>
+                    <img class="diamond_icon" src="/images/diamond.png" pixelized="true">
+                </span>
+                <span class="cart_popup-button_container">
+                    <button class="cart_popup-button cart_popup-button_add" onclick="addToCart(this.parentElement.parentElement.parentElement.parentElement.parentElement)">Add To Cart</button>
+                    <button class="cart_popup-button cart_popup-button_remove" onclick="addToCart(this.parentElement.parentElement.parentElement.parentElement.parentElement, true)">Remove From Cart</button>
+                    <button class="cart_popup-button cart_popup-button_cancel" onclick="closePopup()">Cancel</button>
+                </span>
+            </div>
+        </a>
+    </section>
+</div>

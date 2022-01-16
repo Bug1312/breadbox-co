@@ -1,0 +1,106 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+
+@keyframes cart_bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+html,
+body {
+    background-color: burlywood;
+}
+
+*[pixelized="true"] {
+    -ms-interpolation-mode: nearest-neighbor;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-pixelated;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges
+}
+
+.diamond_icon {
+    height: 16px;
+    width: 16px;
+}
+
+header {
+    z-index: 100;
+    display: inline-flex;
+    height: calc(5rem + 5px);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(41, 35, 32);
+    align-items: center;
+}
+
+.header-image_tag {
+    background-color: rgb(94, 35, 32);
+    width: 5rem;
+    height: calc(100% - 5px);
+    padding-top: 5px;
+    text-align: center;
+    margin-right: 1rem;
+}
+
+.header-image {
+    height: calc(100% - 5px);
+}
+
+.header-title {
+    color: white;
+    font-size: 2rem;
+    font-family: 'Dongle', sans-serif;
+}
+
+.header_cart-basket {
+    margin-left: auto;
+    font-size: 3rem;
+    background-color: rgb(34, 162, 201);
+    width: calc(5rem + 5px);
+    height: calc(100% - 15px);
+    padding-top: 15px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.2s ease-in;
+}
+
+.header_cart-basket>i {
+    position: absolute;
+    right: calc(1rem + 2.5px);
+    color: white;
+}
+
+.header_cart-basket:hover>i,
+.header_cart-basket:focus>i {
+    animation-duration: 800ms;
+    animation-name: cart_bounce;
+}
+
+.header_cart-basket:hover,
+.header_cart-basket:focus {
+    background-color: rgb(38, 177, 219);
+}
+
+main {
+    margin-top: calc(5rem + 1rem);
+}
