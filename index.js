@@ -42,8 +42,9 @@ require('dotenv').config();
     app.post("/post-order", function(request, response) {
         let keys = Object.keys(request.body);
         if (keys.filter(key => key.includes('item_')).length && keys.filter(key => key.includes('form')).length)
-            bot.channels.cache.get(botData.channels.orders).send(createOrderMessage(request.body));
-        response.sendStatus(200);
+            bot.channels.cache.get(botData.channels.orders).send(createOrderMessage(request.body)).then(m => {
+                response.sendStatus(200);
+            });
     });
 }
 
@@ -101,5 +102,5 @@ require('dotenv').config();
 
 // Start bot
 {
-    // bot.login(process.env.TOKEN);
+    bot.login(process.env.TOKEN);
 }
