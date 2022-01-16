@@ -1,14 +1,11 @@
 {
     "name": "breadbox-co",
     "version": "1.0.0",
-    "description": "",
+    "description": "Website for Breadbox Co, a Minecraft shop for DMU",
     "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
     "keywords": [],
-    "author": "",
-    "license": "ISC",
+    "author": "Bug1312",
+    "license": "MIT",
     "dependencies": {
         "body-parser": "^1.19.1",
         "discord.js": "^12.4.1",
